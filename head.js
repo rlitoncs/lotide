@@ -15,9 +15,8 @@ const assertEqual = function(actual, expected) {
 
 
 const head = function(array) {
-  let firstElement = array[0];
   // If length of array is 0, return undefined since there are no elements. Otherwise return the first element of the array.
-  return array.length === 0 ? undefined : firstElement;
+  return array.length === 0 ? undefined : array[0];
 };
 
 
