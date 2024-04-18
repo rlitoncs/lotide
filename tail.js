@@ -33,8 +33,8 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 
 // Test Case 2: Array with one element
 const result2 = tail([1]);
-assertEqual(result2[0], undefined);
+assertEqual(result2.length, 0);
 
 // Test Case 3: Empty Array
 const result3 = tail([]);
-assertEqual(result3[0], undefined);
+assertEqual(result3.length, 0);
