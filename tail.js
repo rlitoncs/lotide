@@ -13,9 +13,9 @@ const assertEqual = function(actual, expected) {
   console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const tail = function (array){
+const tail = function(array) {
   return array.slice(1);
-}
+};
 
 
 
@@ -37,4 +37,4 @@ assertEqual(result2[0], undefined);
 
 // Test Case 3: Empty Array
 const result3 = tail([]);
-assertTequal(result3[0], undefined);
+assertEqual(result3[0], undefined);
