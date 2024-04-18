@@ -16,17 +16,18 @@ const assertEqual = function(actual, expected) {
 
 // FUNCTION IMPLEMENTATION
 const eqArrays = function(arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    for (let num = 0; num < arr1.length; num++) {
-      if (arr1[num] !== arr2[num]) {
-        return false;
-      }
-    }
-  } else {
+  if (arr1.length !== arr2.length) {
     return false;
   }
 
+  for (let num = 0; num < arr1.length; num++) {
+    if (arr1[num] !== arr2[num]) {
+      return false;
+    }
+  }
+
   return true;
+
 };
 
 // TEST CODE
