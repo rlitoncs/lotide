@@ -14,15 +14,16 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const head = function (array){
-  firstElement = array[0];
+const head = function(array) {
+  let firstElement = array[0];
   // If length of array is 0, return undefined since there are no elements. Otherwise return the first element of the array.
-  return array.length === 0 ? undefined : firstElement; 
-}
+  return array.length === 0 ? undefined : firstElement;
+};
 
 
 // TEST CODE
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["OneElement"]), "OneElement");
-assertEqual(head([]), undefined);
+assertEqual(head([5, 6, 7]), 5); //testing with numbers
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); //testing with strings
+assertEqual(head(["OneElement"]), "OneElement"); //testing with 1 element
+assertEqual(head([]), undefined); //testing with no elements
+//unsure how this would assert assertEqual(head([[]]), "object"); 
