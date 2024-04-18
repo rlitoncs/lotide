@@ -9,11 +9,9 @@
  */
 
 const assertEqual = function(actual, expected) {
+  // If actual and expected values are equal, print success message. Otherwise, print failure message.
   console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
-
-
-
 
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp"); // testing with two different strings
