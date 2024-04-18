@@ -16,5 +16,7 @@ const assertEqual = function(actual, expected) {
 
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+assertEqual("Lighthouse Labs", "Bootcamp"); // two different strings
+assertEqual("Hello", "Hello"); // two equal strings
+assertEqual(1, 2); // two different strings
+assertEqual(1, 1); // two equal numbers
