@@ -25,7 +25,7 @@ const eqArrays = function(arr1, arr2) {
 
 //ASSERT EQUAL ARRAYS
 const assertArraysEqual = function(arr1, arr2) {
-  console.log(eqArrays(arr1,arr2) ? `✅✅✅ Assertion Passed: ${arr1} === ${arr2}` : `🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+  console.log(eqArrays(arr1,arr2) ? `✅✅✅ Assertion Passed: [${arr1}] === [${arr2}]` : `🛑🛑🛑 Assertion Failed: [${arr1}] !== [${arr2}]`);
 };
 
 
@@ -35,11 +35,6 @@ const without = function(sourceArr, itemsToRemove) {
 
   //Return empty if sourceArr is already empty
   if (sourceArr.length === 0) {
-    return withoutArray;
-  }
-
-  //Return empty array if sourceArr and itemsToRemove array are equal
-  if (eqArrays(sourceArr, itemsToRemove)) {
     return withoutArray;
   }
 
@@ -57,10 +52,10 @@ const without = function(sourceArr, itemsToRemove) {
 
 
 // TEST CASES
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-console.log(without(["1", "2", "3"], [4,5,6])); // => [ '1', '2', '3' ] nothing to remove
-console.log(without([],[])); // => []
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
+assertArraysEqual(without(["1", "2", "3"], [4,5,6]), ["1", "2", "3"]); // => [ '1', '2', '3' ] nothing to remove
+assertArraysEqual(without([],[]), []); // => []
 
 
 
