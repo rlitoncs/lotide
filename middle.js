@@ -42,8 +42,6 @@ const assertArraysEqual = function(arr1, arr2) {
 const middle = function(sourceArr) {
   const sourceArrCopy = sourceArr.slice(); //returns a copy of sourceArr so original contents are not modified
 
-  const emptyArr = [];
-
   //Case 1: no elements
   if (sourceArrCopy.length === 0) {
     return sourceArrCopy;
@@ -51,20 +49,19 @@ const middle = function(sourceArr) {
 
   //Case 2: 1 or 2 elements
   if (sourceArrCopy.length === 1 || sourceArrCopy.length === 2) {
-    return emptyArr;
+    return [];
   }
 
   // Case 3: More than 2 elements
   // a) remove 1 element if sourceArr length is odd
   if (sourceArrCopy.length % 2 === 1) {
-    const middleElem = sourceArrCopy.splice((sourceArrCopy.length - 1) / 2, 1);
-    return middleElem;
+    console.log([sourceArrCopy[(sourceArrCopy.length - 1) / 2]]);
+    return [sourceArrCopy[(sourceArrCopy.length - 1) / 2]]; // wrap the result in another array so it returns an array with the middle elem
   }
   
   // b) remove 2 elements if sourceArr length is even
   if (sourceArrCopy.length % 2 === 0) {
-    const middleElem = sourceArrCopy.splice((sourceArrCopy.length / 2) - 1, 2);
-    return middleElem;
+    return [sourceArrCopy[(sourceArrCopy.length / 2) - 1], sourceArrCopy[sourceArrCopy.length / 2]]; // wrap the result in another array so it returns an array with the middle elements
   }
 
 };
@@ -78,7 +75,7 @@ assertArraysEqual(middle([1, 2]), []); // => []
 
 //For arrays with odd number of elements, an array containing a single middle element should be returned.
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-// assertArraysEqual(middle([1, 2, [], 4, 5]), []); // => [] unsure about this one
+assertArraysEqual(middle([1, 2, [], 4, 5]), [[]]); // => [] unsure about this one, returns failed
 
 //For arrays with an even number of elements, an array containing the two elements in the middle should be returned
 assertArraysEqual(middle([1, 2, 3, 4]), [2,3]); // => [2, 3]
