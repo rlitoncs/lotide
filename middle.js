@@ -35,13 +35,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 // MIDDLE Function Implementation
 const middle = function(sourceArr) {
-
-  //Case 1: no elements
-  if (sourceArr.length === 0) {
-    return sourceArr;
-  }
-
-  //Case 2: 1 or 2 elements
+  //Case 2: Less than 2 elements
   if (sourceArr.length <= 2) {
     return [];
   }
