@@ -33,6 +33,11 @@ const assertArraysEqual = function(arr1, arr2) {
 const without = function(sourceArr, itemsToRemove) {
   const withoutArray = [];
 
+  //Return empty if sourceArr is already empty
+  if (sourceArr.length === 0) {
+    return withoutArray;
+  }
+
   //Return empty array if sourceArr and itemsToRemove array are equal
   if (eqArrays(sourceArr, itemsToRemove)) {
     return withoutArray;
@@ -54,6 +59,9 @@ const without = function(sourceArr, itemsToRemove) {
 // TEST CASES
 console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
+console.log(without(["1", "2", "3"], [4,5,6])); // => [ '1', '2', '3' ] nothing to remove
+console.log(without([],[])); // => []
+
 
 
 
