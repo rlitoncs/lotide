@@ -33,11 +33,6 @@ const assertArraysEqual = function(arr1, arr2) {
 const without = function(sourceArr, itemsToRemove) {
   const withoutArray = [];
 
-  //Return empty if sourceArr is already empty
-  if (sourceArr.length === 0) {
-    return withoutArray;
-  }
-
   //Iterates over the sourceArr and looks for items that are not being removed and adds it to the new array
   for (let i of sourceArr) {
     if (!itemsToRemove.includes(i)) {
