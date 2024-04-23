@@ -1,3 +1,10 @@
+/**
+ *
+ * eqObjects takes in 2 objects and checks to see if the both objects have identical keys and values. Returns true if both objects are identical, otherwise false if not
+ *
+ */
+
+
 const assertEqual = function(actual, expected) {
   // If actual and expected values are equal, print success message. Otherwise, print failure message.
   console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
