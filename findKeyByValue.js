@@ -13,8 +13,8 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(object, value) {
 
   //For..in loop finds all the keys
-  for (let key in bestTVShowsByGenre) {
-    if (bestTVShowsByGenre [key] === value) {
+  for (let key in object) {
+    if (object [key] === value) {
       return key;
     }
   }
