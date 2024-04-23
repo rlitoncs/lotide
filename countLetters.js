@@ -22,7 +22,8 @@ const countLetters = function(string) {
   // If the item is found, increment the value by 1
 
   for (let char of string) {
-    if (char !== ' ') {
+    // This uses the regular expression /[a-z]/i to check if char is a letter. The i at the end makes it case-insensitive, so it will match both lower-case and upper-case letters.
+    if (/[a-z]/i.test(char)) {
       if (letterOccurences[char]) {
         letterOccurences[char] += 1;
       } else {
