@@ -30,7 +30,9 @@ const eqArrays = function(arr1, arr2) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length) {
+  const keys1 = Object.keys(object1);
+
+  if (keys1.length !== Object.keys(object2).length) {
     return false;
   }
 
@@ -40,7 +42,7 @@ const eqObjects = function(object1, object2) {
   // If not, return false
   // Return true if all the key-value pairs have identical keys and value after the loop
   
-  for (let keys of Object.keys(object1)) {
+  for (let keys of keys1) {
     if (Array.isArray(object1[keys]) && Array.isArray(object2[keys])) {
        if(!(eqArrays(object1[keys], object2[keys]))){
         return false;
