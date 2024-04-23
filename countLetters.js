@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(string) {
   const letterOccurences = {};
 
-  // Check if the current character is not 'empty space'
+  // Check if the current character is not 'space character'
   // Check if the current character is in letterOccurences object
   // If not, add the item to the object with a value of 1
   // If the item is found, increment the value by 1
