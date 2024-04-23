@@ -31,8 +31,9 @@ const eqArrays = function(arr1, arr2) {
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
 
-  if (keys1.length !== Object.keys(object2).length) {
+  if (keys1.length !== keys2.length) {
     return false;
   }
 
