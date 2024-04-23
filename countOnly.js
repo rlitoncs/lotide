@@ -1,3 +1,11 @@
+/**
+ * 
+ * countOnly Function takes in an array of Items and counts only the items that need to be counted for in itemsToCount object, then returns a new object with the selected items and it's associated count value 
+ * 
+ */
+
+
+
 const assertEqual = function(actual, expected) {
   // If actual and expected values are equal, print success message. Otherwise, print failure message.
   console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
