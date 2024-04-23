@@ -10,7 +10,11 @@ const countOnly = function (allItems, itemsToCount) {
 
   for (const item of allItems) {
 
-    // this first if statement serves as a check to see if the current item is in the itemsToCount, if not, it ignores it and goes to the next item. Once an item is found, a check is initiated to see if the item exists in the results object, if not, it adds the item to the object with a value of 1
+  // Check if the current item is in the itemsToCount
+  // If not, ignore it and go to the next item
+  // If the item is found, check if it exists in the results object
+  // If it doesn't exist, add the item to the object with a value of 1
+  
     if (itemsToCount[item]) {
       if (results[item]) {
         results[item] += 1;
@@ -20,7 +24,7 @@ const countOnly = function (allItems, itemsToCount) {
     }
   }
 
-  console.log(results);
+  // console.log(results); Debugging purposes
 
   //Add an if condition to only increment our count in results if the item is found in the itemsToCount object.
   return results;
