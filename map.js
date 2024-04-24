@@ -43,7 +43,7 @@ const arrayOfArrays = [['hello', 'there'], ['Second', 'Array'], ['Interesting', 
 const numbers = [5,10,15];
 
 const results1 = map(words, (word) => word[0]);
-const results2 = map(arrayOfArrays, (Array) => Array[0]);
+const results2 = map(arrayOfArrays, (innerArray) => innerArray[0]);
 const results3 = map(numbers, (number) => number*2);
 
 
