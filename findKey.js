@@ -15,7 +15,7 @@ const findKey = function(object, callbackF) {
   // Get the keys in the object
   // Apply the callback function on each object[key]
   // if callBack returns true, return the key
-  for (let key in keys) {
+  for (let key of keys) {
     if (callbackF(object[key])) {
       return key;
     }
