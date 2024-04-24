@@ -33,9 +33,8 @@ const takeUntil = function(arr, callbackF) {
   for (let item of arr) {
     if (callbackF(item)) {
       return result;
-    } else {
-      result.push(item);
     }
+    result.push(item);
   }
   return result;
 
