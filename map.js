@@ -40,13 +40,13 @@ const map = function(arr, callbackF) {
 
 const words = ["ground", "control", "to", "major", "tom"];
 const arrayOfArrays = [['hello', 'there'], ['Second', 'Array'], ['Interesting', 'bear']];
-const numbers = [123,456,789];
+const numbers = [5,10,15];
 
 const results1 = map(words, (word) => word[0]);
 const results2 = map(arrayOfArrays, (Array) => Array[0]);
-const results3 = map(numbers, (number) => number[0]);
+const results3 = map(numbers, (number) => number*2);
 
 
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
-assertArraysEqual(results2, ['hello','Second', 'Interesting']);
-assertArraysEqual(results3, [undefined,undefined,undefined]);
+assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); //PASS
+assertArraysEqual(results2, ['hello','Second', 'Interesting']); //PASS
+assertArraysEqual(results3, [10,20,30]);// PASS
