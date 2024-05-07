@@ -6,16 +6,21 @@
  */
 // EQUAL ARRAYS function
 const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+  if (arr1.length !== arr2.length) return false;
+  
+  //This does the same thing as a for loop, but in a more concise way.
+  return arr1.every((val, index) => val === arr2[index]);
 
-  for (let num = 0; num < arr1.length; num++) {
-    if (arr1[num] !== arr2[num]) {
-      return false;
-    }
-  }
-  return true;
 };
 
 module.exports = eqArrays;
+
+
+// Old solution:
+/*
+for (let num = 0; num < arr1.length; num++) {
+  if (arr1[num] !== arr2[num]) {
+    return false;
+  }
+}
+*/
