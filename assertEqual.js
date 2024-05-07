@@ -5,7 +5,7 @@
  *
  * assertEqual uses a ternary operator to decide whether the two arguments are strictly equal and outputs the assertion message
  *
- * Reminder: eslint assertEqual.js
+ * 
  */
 
 const assertEqual = function(actual, expected) {

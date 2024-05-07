@@ -1,11 +1,8 @@
 // FUNCTION IMPLEMENTATION
 /**
  *
- * assertEqual function expects two arguments and returns a passed assertion or a failed assertion, depending on whether the two arguments strictly match
- *
- * assertEqual uses a ternary operator to decide whether the two arguments are strictly equal and outputs the assertion message
- *
- * Reminder: eslint assertEqual.js
+ * head() takes in an array and returns the first element (aka head)
+ * 
  */
 
 const head = function(array) {
