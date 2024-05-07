@@ -8,21 +8,9 @@
  * Reminder: eslint assertEqual.js
  */
 
-const assertEqual = function(actual, expected) {
-  // If actual and expected values are equal, print success message. Otherwise, print failure message.
-  console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-
 const head = function(array) {
   // If length of array is 0, return undefined since there are no elements. Otherwise return the first element of the array.
   return array.length === 0 ? undefined : array[0];
 };
 
-
-// TEST CODE
-assertEqual(head([5, 6, 7]), 5); //testing with numbers
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); //testing with strings
-assertEqual(head(["OneElement"]), "OneElement"); //testing with 1 element
-assertEqual(head([]), undefined); //testing with no elements
-assertEqual(Array.isArray(head([[]])), true); //testing if first element is an array itself
+module.exports = head;
