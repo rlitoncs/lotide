@@ -5,14 +5,6 @@
  *
  */
 
-
-
-const assertEqual = function(actual, expected) {
-  // If actual and expected values are equal, print success message. Otherwise, print failure message.
-  console.log(actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-
 const countLetters = function(string) {
   const letterOccurences = {};
 
@@ -34,11 +26,5 @@ const countLetters = function(string) {
   //console.log(letterOccurences); // Debugging purposes
   return letterOccurences;
 };
-
-let result = countLetters("lighthouse in the house"); //return object
-
-assertEqual(result["l"], 1); // Evaluate to True 1 === 1
-assertEqual(result["h"], 4); // Evalute to True 4 === 4
-assertEqual(result["e"], 3); // Evalute to True 3 === 3
 
 module.exports = countLetters;
