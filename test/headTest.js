@@ -7,7 +7,7 @@ describe("#head: return first element of array", () => {
   });
 
   it(`returns '5' for ["5"]`, () => {
-    assert.strictEqual(head(['5']), '5'); 
+    assert.strictEqual(head(['5']), '5');
   });
 
   // testing with strings
@@ -18,16 +18,16 @@ describe("#head: return first element of array", () => {
   //testing with 1 element
   it(`returns 'OneElement' for ["OneElement"]`, () => {
     assert.strictEqual(head(["OneElement"]), "OneElement");
-  })
+  });
 
   //testing with no elements
   it("returns 'undefined' for []", () => {
     assert.strictEqual(head([]), undefined);
-  }) 
+  });
 
   //testing if first element is an array itself
   it("testing if first element is an array itself, returns true for [[]]", () => {
     assert.strictEqual(Array.isArray(head([[]])), true);
-  }) 
+  });
 
 });
