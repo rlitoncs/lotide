@@ -6,29 +6,6 @@
  *
  */
 
-
-// EQUAL ARRAYS Function
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let num = 0; num < arr1.length; num++) {
-    if (arr1[num] !== arr2[num]) {
-      return false;
-    }
-  }
-
-  return true;
-
-};
-
-//ASSERT EQUAL ARRAYS
-const assertArraysEqual = function(arr1, arr2) {
-  console.log(eqArrays(arr1,arr2) ? `✅✅✅ Assertion Passed: [${arr1}] === [${arr2}]` : `🛑🛑🛑 Assertion Failed: [${arr1}] !== [${arr2}]`);
-};
-
-
 //WITHOUT FUNCTION IMPLEMENTATION
 const without = function(sourceArr, itemsToRemove) {
   const withoutArray = [];
@@ -43,21 +20,5 @@ const without = function(sourceArr, itemsToRemove) {
   return withoutArray;
 
 };
-
-
-
-// TEST CASES
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
-assertArraysEqual(without(["1", "2", "3"], [4,5,6]), ["1", "2", "3"]); // => [ '1', '2', '3' ] nothing to remove
-assertArraysEqual(without([],[]), []); // => []
-
-
-
-
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
-
-assertArraysEqual(words, ["hello", "world", "lighthouse"]); // Make sure the original array was not altered by the without function
 
 module.exports = without;
