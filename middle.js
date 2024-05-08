@@ -1,66 +1,25 @@
 /**
  * Objective: middle() function will take in an array and return the middle-most element(s) of the given array.
  *
- * eqArrays() checks to see if 2 arrays are equally matched and returns true if it is
- *
- * assertArraysEqual() reinforces that 2 arrays are in fact the same
- *
- *
  * middle() takes in an array and returns an array of the middle element
  *
- *
  */
-
-
-// EQUAL ARRAYS Function
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let num = 0; num < arr1.length; num++) {
-    if (arr1[num] !== arr2[num]) {
-      return false;
-    }
-  }
-
-  return true;
-
-};
-
-//ASSERT EQUAL ARRAYS
-const assertArraysEqual = function(arr1, arr2) {
-  console.log(eqArrays(arr1,arr2) ? `✅✅✅ Assertion Passed: [${arr1}] === [${arr2}]` : `🛑🛑🛑 Assertion Failed: [${arr1}] !== [${arr2}]`);
-};
 
 // MIDDLE Function Implementation
 const middle = function(sourceArr) {
   //Case 2: Less than 2 elements
-  if (sourceArr.length <= 2) {
-    return [];
-  }
-
+  if (sourceArr.length <= 2) return [];
+  
   // Case 3: More than 2 elements
   // a) remove 1 element if sourceArr length is odd
   // b) remove 2 elements if sourceArr length is even
   if (sourceArr.length % 2 === 1) {
     return [sourceArr[(sourceArr.length - 1) / 2]]; // wrap the result in another array so it returns an array with the middle elem
-  } else {
-    return [sourceArr[(sourceArr.length / 2) - 1], sourceArr[sourceArr.length / 2]]; // wrap the result in another array so it returns an array with the middle elements
   }
+  
+  // wrap the result in another array so it returns an array with the middle elements
+  return [sourceArr[(sourceArr.length / 2) - 1], sourceArr[sourceArr.length / 2]];
   
 };
 
-
-//TEST CASES
-//For arrays with one or two elements, there is no middle. Return an empty array.
-assertArraysEqual(middle([]), []); // => []
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]), []); // => []
-
-//For arrays with odd number of elements, an array containing a single middle element should be returned.
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-assertArraysEqual(middle([1, 2, [], 4, 5]), [[]]); // => [] unsure about this one, it keeps returning failed?
-
-//For arrays with an even number of elements, an array containing the two elements in the middle should be returned
-assertArraysEqual(middle([1, 2, 3, 4]), [2,3]); // => [2, 3]
+module.exports = middle;
