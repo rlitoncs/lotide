@@ -50,5 +50,3 @@ const results3 = map(numbers, (number) => number*2);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']); //PASS
 assertArraysEqual(results2, ['hello','Second', 'Interesting']); //PASS
 assertArraysEqual(results3, [10,20,30]);// PASS
-
-module.exports = map;
