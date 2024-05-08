@@ -12,11 +12,11 @@ const middle = function(sourceArr) {
   
   // Case 3: More than 2 elements
   // a) remove 1 element if sourceArr length is odd
-  // b) remove 2 elements if sourceArr length is even
   if (sourceArr.length % 2 === 1) {
     return [sourceArr[(sourceArr.length - 1) / 2]]; // wrap the result in another array so it returns an array with the middle elem
   }
   
+  // b) remove 2 elements if sourceArr length is even
   // wrap the result in another array so it returns an array with the middle elements
   return [sourceArr[(sourceArr.length / 2) - 1], sourceArr[sourceArr.length / 2]];
   
