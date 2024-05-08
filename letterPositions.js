@@ -54,3 +54,5 @@ let result2 = letterPositions("lighthouse in the house");
 
 assertArraysEqual(result1['h'], [0]); // PASS
 assertArraysEqual(result2['i'], [1, 11]); // PASS
+
+module.exports = letterPositions;
