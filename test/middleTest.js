@@ -3,6 +3,14 @@ const middle = require('../middle');
 
 describe("#middle: return array of middle element", () => {
 
+  //Make sure Original array was not altered
+  it("make sure the original array was not altered by the middle function", () => {
+    const words = ["hello", "world", "lighthouse"];
+    const result = middle(words);
+    assert.strictEqual(words.length, 3);
+  });
+  
+
   //For arrays with one or two elements, there is no middle. Return an empty array.
   it(`returns true: Middle of [] is [] `, () => {
     assert.deepEqual(middle([]), []);
