@@ -1,15 +1,19 @@
 //Require modules
-const assertArraysEqual = require("../assertArraysEqual");
+const assert = require("chai").assert;
 const takeUntil = require("../takeUntil");
-
-
-//TEST CASES
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 
-const results1 = takeUntil(data1, x => x < 0);
-const results2 = takeUntil(data2, x => x === ',');
+//TEST CASES
 
-assertArraysEqual(results1, [1,2,5,7,2]); //PASS
-assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]); //PASS
+describe("#takeUntil", () => {
+
+  it("given array: [1, 2, 5, 7, 2, -1, 2, 4, 5] should return [1,2,5,7,2]", () =>{
+    assert.deepEqual(takeUntil(data1, x => x < 0), [1,2,5,7,2]);
+  });
+
+  it("given array: ['I've', 'been', 'to', 'Hollywood', ',', 'I've', 'been', 'to', 'Redwood'] should return [1,2,5,7,2]", () =>{
+    assert.deepEqual(takeUntil(data2, x => x === ','),  ["I've", "been", "to", "Hollywood"]);
+  });
+});
