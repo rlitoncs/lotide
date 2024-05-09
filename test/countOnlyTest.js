@@ -1,10 +1,7 @@
 //Require Modules
-const assertEqual = require("../assertEqual");
+const assert = require('chai').assert;
 const countOnly = require("../countOnly");
 
-// TEST CASES
-
-//array
 const firstNames = [
   "Karl",
   "Salima",
@@ -24,7 +21,20 @@ const result1 = countOnly(firstNames, {
   Agouhanna: false,
 });
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+describe("#countOnly:", () => {
+  it ("returns '1' for Jason", () => {
+    assert.strictEqual(result1["Jason"], 1);
+  })
+
+  it ("returns undefined for Karima", () => {
+    assert.strictEqual(result1["Karima"], undefined);
+  })
+
+  it ("returns '2' for Fang", () => {
+    assert.strictEqual(result1["Fang"], 2);
+  })
+
+  it ("returns undefined for Agouhanna", () => {
+    assert.strictEqual(result1["Agouhanna"], undefined);
+  })
+})
