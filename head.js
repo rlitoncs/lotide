@@ -1,8 +1,10 @@
 // FUNCTION IMPLEMENTATION
 /**
  *
- * head() takes in an array and returns the first element (aka head)
+ * head(arr) takes in an array and returns the first element of the array
  * 
+ * @param {Array} array 
+ * @returns {*} - the first element of the array
  */
 
 const head = function(array) {

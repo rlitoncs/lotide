@@ -1,9 +1,13 @@
 /**
  *
- * takeUntil() function takes in an array and callback Function and returns a new Array with new content
+ * takeUntil(arr, callbackF) takes in an array and a callback function and returns a new array with content, up until it satifies the callback function condition
+ * 
+ * @param {Array} arr - the array we will use to apply our callback function on
+ * @param {Object} callbackF - the callback function we will invoke on the array
+ * @returns {Array} - a new array
  */
 
-//takeUntil function implementation
+//takeUntil
 const takeUntil = function(arr, callbackF) {
   const result = [];
 

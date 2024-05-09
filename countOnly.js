@@ -1,11 +1,12 @@
 /**
  * 
- * countOnly Function takes in an array of Items and counts only the items that need to be counted for in itemsToCount object, then returns a new object with the selected items and it's associated count value 
+ * countOnly(allItems, itemsToCount) takes in an array of items and a itemsToCount object. The array counts only the items that need to be counted for in itemsToCount object, then returns a new object 
  * 
+ * @param {Array} allItems - an array that we need to look through
+ * @param {Object} itemsToCount - an object specifying what to count
+ * @returns {Object} - shows the items that were counted for
  */
 
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
 const countOnly = function (allItems, itemsToCount) {
   const results = {};
 
@@ -24,10 +25,6 @@ const countOnly = function (allItems, itemsToCount) {
       }
     }
   }
-
-  // console.log(results); Debugging purposes
-
-  //Add an if condition to only increment our count in results if the item is found in the itemsToCount object.
   return results;
 };
 

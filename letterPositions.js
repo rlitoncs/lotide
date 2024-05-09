@@ -1,8 +1,9 @@
 /**
  *
- * letterPositions() takes in a string and returns an object of all the indexes of where each letter occurs in the sentence
+ * letterPositions(string) takes in a string and returns an object of all the indexes of where each letter occurs in the sentence
  *
- *
+ * @param {String} sentence
+ * @returns {Object} - the indexes of where each letter occurs
  */
 
 const letterPositions = function(sentence) {
@@ -15,7 +16,7 @@ const letterPositions = function(sentence) {
   
   for (let index = 0; index < sentence.length; index++) {
     // This uses the regular expression /[a-z]/i to check if char is a letter. The i at the end makes it case-insensitive, so it will match both lower-case and upper-case letters.
-    ///a-z/i.test(sentence[index]) stopped working?
+    ///a-z/i.test(sentence[index]) stopped working
     if (sentence[index].toLowerCase != sentence[index].toUpperCase) {
       if (results[sentence[index]]) {
         results[sentence[index]].push(index);
@@ -24,9 +25,7 @@ const letterPositions = function(sentence) {
       }
     }
   }
-  // console.log(results); //Debugging purposes
-
-  return results; //return all indices where each character is found
+  return results; 
 };
 
 module.exports = letterPositions;

@@ -1,14 +1,19 @@
 /**
  *
- * eqObjects takes in 2 objects and checks to see if the both objects have identical keys and values. Returns true if both objects are identical, otherwise false if not
+ * eqObjects(object1, object2) takes in 2 objects and checks to see if the both objects have identical keys and values. Returns true if both objects are identical, otherwise false
  *
+ * @param {Object} object1 - the first object we want to compare
+ * @param {Object} object2 - the second object we want to compare
+ * @returns {Boolean} - returns true if both objects have identical keys with identical values, otherwise false
+ * 
+ * Note*: two objects are equal when:
+    They have the same number of keys
+    The value for each key in one object is the same as the value for that same key in the other object
  */
 
 const eqArrays = require("./eqArrays");
 
-// EQUAL OBJECTS Implementation
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// EQUAL OBJECTS Functions
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
@@ -37,25 +42,3 @@ const eqObjects = function(object1, object2) {
 };
 
 module.exports = eqObjects;
-
-/*
-two objects are equal when:
-
-    They have the same number of keys
-    The value for each key in one object is the same as the value for that same key in the other object
-
- */
-
-/*
-Possible Solution 2: Primitive as Values
-  // for (let key in object1) {
-  //   if (object2[key]) {
-  //     if (object1[key] !== object2[key]) {
-  //       return false;
-  //     }
-  //   } else {
-  //     return false;
-  //   }
-  // } return true;
-
-*/

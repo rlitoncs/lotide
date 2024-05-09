@@ -1,10 +1,13 @@
-// FUNCTION IMPLEMENTATION
 /**
  *
- * eqArrays() takes in 2 arrays and checks that the elements of both arrays are identical in value and position
+ * eqArrays(arr1, arr2) takes in 2 arrays and checks that the elements of both arrays are identical in value and position. Returns true if both arrays are identical, otherwise false
  *
+ * @param {Array} arr1 - the first array we want to compare
+ * @param {Array} arr2 - the second array we want to compare
+ * @returns {Boolean} - returns a true or false if arrays are equal or not
  */
-// EQUAL ARRAYS function
+
+// EQUAL ARRAYS Function
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   
@@ -14,13 +17,3 @@ const eqArrays = function(arr1, arr2) {
 };
 
 module.exports = eqArrays;
-
-
-// Old solution:
-/*
-for (let num = 0; num < arr1.length; num++) {
-  if (arr1[num] !== arr2[num]) {
-    return false;
-  }
-}
-*/

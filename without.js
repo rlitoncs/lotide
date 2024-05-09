@@ -1,9 +1,10 @@
 
 /**
- * Objective: without(source, itemsToRemove) function should take in a source array and a itemsToRemove array. It should return a new array with only those elements from source that are not present in the itemsToRemove array.
+ * without(sourceArr, itemsToRemove) takes in a source array and a itemsToRemove array. It should return a new array with only those elements from source that are not present in the itemsToRemove array
  *
- *
- *
+ * @param {Array} sourceArr - the array we will search through
+ * @param {Array} itemsToRemove - the items we will remove from the array
+ * @returns {Array} - new array with items removed
  */
 
 //WITHOUT FUNCTION IMPLEMENTATION

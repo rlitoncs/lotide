@@ -1,8 +1,9 @@
 /**
  *
- * countLetters () takes in a string, and counts the number of occurences of each letter in the string
- * Returns a object back with the occurences of each letter in the string
+ * countLetters(string) takes in a string and counts the number of occurences of each letter in the string. Returns a object back with the occurences of each letter in the string
  *
+ * @param {string} string - the content we want to input
+ * @returns {Object} - an object that contains the number of courrences of each letter in the string 
  */
 
 const countLetters = function(string) {
@@ -23,7 +24,6 @@ const countLetters = function(string) {
       }
     }
   }
-  //console.log(letterOccurences); // Debugging purposes
   return letterOccurences;
 };
 

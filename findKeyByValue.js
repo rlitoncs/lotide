@@ -1,7 +1,10 @@
 /**
  *
- * findKeyByValue takes in an object, and a target value, and returns the key that matches the target value
+ * findKeyByValue(object, value) takes in an object, and a target value, and returns the first key that matches the target value
  *
+ * @param {Object} object - the object we will search through
+ * @param {*} value - can be of any type
+ * @returns {String | undefined} - the first key that was found otherwise undefined
  */
 
 const findKeyByValue = function(object, value) {
@@ -12,9 +15,7 @@ const findKeyByValue = function(object, value) {
       return key;
     }
   }
-
-  //return the first key that is matched with given value
-  //If no key with given value is found, return undefined
+  
 };
 
 

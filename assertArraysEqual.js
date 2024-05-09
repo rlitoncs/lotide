@@ -1,12 +1,12 @@
-// FUNCTION IMPLEMENTATION
 /**
  *
- * eqArrays() function expects two arguments and returns true upon the 2 arrays matching, or returns false if invalid
+ * eqArrays(arr1, arr2) takes in 2 arrays and checks that the elements of both arrays are identical in value and position. Returns true if both arrays are identical, otherwise false
  *
- * assertArraysEqual() takes 2 arrays and makes use of the eqArrays() function to check whether the 2 arrays are matching.
+ * assertArraysEqual(arr1, arr2) takes in 2 arrays and checks whether the 2 arrays are matching. If it is, the arrays are outputted along with an assertion message displaying a if it has passed or failed 
  *
- * Uses a ternary operator to decide whether 2 arrays returned are the same (true) outputs the assertion message
- *
+ * @param {Array} arr1  
+ * @param {Array} arr2
+ * @returns {string} - an assertion message displaying whether both arrays have passed or failed
  */
 
 //Require eqArrays module
