@@ -1,17 +1,32 @@
 //Require Modules
-const assertArraysEqual = require("../assertArraysEqual");
+const assert = require("chai").assert;
 const without = require("../without");
 
-// TEST CASES
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
-assertArraysEqual(without(["1", "2", "3"], [4,5,6]), ["1", "2", "3"]); // => [ '1', '2', '3' ] nothing to remove
-assertArraysEqual(without([],[]), []); // => []
-
-
-
-
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]); // Make sure the original array was not altered by the without function
+// TEST CASES
+describe("#without", () => {
+
+  it("make should original array is not modified", () => {
+    without(words, ["lighthouse"]);
+    assert.deepEqual(words, ["hello", "world", "lighthouse"]);
+  });
+
+  it("given array: [1,2,3] and itemsToRemove [1], should return [2,3]", () => {
+    assert.deepEqual(without([1, 2, 3], [1]), [2,3]);
+  });
+
+  it("given array: ['1', '2', '3'] and itemsToRemove [1,2,'3'] should return ['1','2']", () => {
+    assert.deepEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+  });
+
+  //Nothing to remove
+  it("given array: ['1', '2', '3'] and itemsToRemove [4,5,6] should return ['1', '2', '3']", () => {
+    assert.deepEqual(without(["1", "2", "3"], [4,5,6]), ["1", "2", "3"]);
+  });
+
+  it("given array: [] and itemsToRemove [] should return []", () => {
+    assert.deepEqual(without([], []), []);
+  });
+
+});
