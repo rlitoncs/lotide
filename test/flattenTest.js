@@ -9,4 +9,20 @@ describe("#flatten", () => {
     assert.deepEqual(flatten([1, 2, [3, 4], 5, [6]]), [1,2,3,4,5,6]);
   });
 
+  it("should return [[]] when given [[[]]]", () => {
+    assert.deepEqual(flatten([[[]]]), [[]]);
+  });
+
+  it("should return [1, []] when given [1,[[]]]", () => {
+    assert.deepEqual(flatten([1,[[]]]), [1, []]);
+  });
+
+  it("should return [1,1,[1]] when given [1,[1,[1]]]", () => {
+    assert.deepEqual(flatten([1,[1,[1]]]), [1,1,[1]]);
+  });
+  
+  it("should return [[[]],[]] when given [[], [[[]]], [[]], []]]", () => {
+    assert.deepEqual(flatten([[], [[[]]], [[]], []]), [[[]],[]]);
+  });
+
 });

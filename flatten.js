@@ -1,6 +1,6 @@
 /**
  * 
- * flatten(arr) will take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array
+ * flatten(arr) will take in an array containing elements including nested arrays of elements, and flatten the array one level deep and returns a new "flattened" version of the array
  * 
  * @param {Array} sourceArr - the array we will flatten
  * @returns {Array} - the new flattened version of the array
